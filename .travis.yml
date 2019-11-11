@@ -8,14 +8,15 @@ python:
   - "3.8"
 
 env:
-- ANSIBLE=<2.8
-- ANSIBLE=>=2.9
+- ANSIBLE_VER=<2.8
+- ANSIBLE_VER=>=2.9
 
 before_install:
   - sudo apt-get update -qq
 
 install:
-  - sudo apt-get -y install git ansible
+  - sudo apt-get -y install git
+  - pip install "ansible$ANSIBLE_VER"
   - make setup
 
 script:
