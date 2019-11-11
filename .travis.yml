@@ -16,7 +16,7 @@ before_install:
 
 install:
   - sudo apt-get -y install git
-  - echo $ANSIBLE_VER
+  - echo {$ANSIBLE_VER}
   - pip install "ansible$ANSIBLE_VER"
   - make setup
 
