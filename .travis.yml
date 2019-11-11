@@ -7,6 +7,10 @@ python:
   - "3.7"
   - "3.8"
 
+env:
+- ANSIBLE=<2.8
+- ANSIBLE=>=2.9
+
 before_install:
   - sudo apt-get update -qq
 
